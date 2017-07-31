@@ -1,3 +1,8 @@
+/*
+將使用者輸入的名字轉換成大寫縮寫
+使用者可能會手滑在前方多輸入多個空白
+*/
+
 #include <stdio.h>
 #include <cs50.h>
 #include <string.h>
