@@ -7,6 +7,7 @@ input: ABC
 output: BCD
 
 需注意大寫轉換的將固定為大寫，小寫亦然
+*/
 
 #include <stdio.h>
 #include <cs50.h>
