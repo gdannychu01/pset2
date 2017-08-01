@@ -31,7 +31,7 @@ int main(int argc, string argv[])
     for(int i = 0, n = strlen(line); i < n; i++){
         
         //check if char in the string plus code would still in the upper or lower case
-        if((('A' < (line[i] + m % 26)) &&  ((line[i] + m % 26)< 'Z')) || (('a' < (line[i] + m % 26)) && ((line[i] + m % 26) < 'z')))        {
+        if((('A' < (line[i] + m % 26)) &&  ((line[i] + m % 26)< 'Z')) || (('a' < (line[i] + m % 26)) && ((line[i] + m % 26) < 'z'))){
             line[i] += m % 26;
         }
         
