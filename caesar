@@ -1,0 +1,44 @@
+/*
+將使用者command line輸入的第二項參數的數值做為加密的密碼
+加密使用者所輸入的字串
+如 
+./a.out 1
+input: ABC
+output: BCD
+
+需注意大寫轉換的將固定為大寫，小寫亦然
+
+#include <stdio.h>
+#include <cs50.h>
+#include <string.h>
+
+int main(int argc, string argv[])
+{
+    //turn agrv into int
+    int m = atoi(argv[1]);
+    
+    //check if the code numeber is entered correctly
+    if((argc < 2 || argc > 2)||(m < 0)){
+        printf("Usage: ./caesar k\n");
+        return 1;
+    }
+    
+    //prompt for a string
+    printf("plaintext: ");
+    string line = get_string();
+    
+    for(int i = 0, n = strlen(line); i < n; i++){
+        
+        //check if char in the string plus code would still in the upper or lower case
+        if((('A' < (line[i] + m % 26)) &&  ((line[i] + m % 26)< 'Z')) || (('a' < (line[i] + m % 26)) && ((line[i] + m % 26) < 'z')))        {
+            line[i] += m % 26;
+        }
+        
+        else{
+            line[i] += ((m % 26) - 26);
+        }
+    }
+    
+    printf("ciphertext: %s\n", line);
+    return 0;
+}
